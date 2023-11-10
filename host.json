@@ -1,0 +1,19 @@
+{
+    "version": "2.0",
+  "logging": {
+    "fileLoggingMode": "always",
+    "logLevel": {
+      "default": "Trace",
+      "Microsoft": "Trace",
+      "Worker": "Trace"
+    },
+
+    "applicationInsights": {
+      "samplingSettings": {
+        "isEnabled": true,
+        "excludedTypes": "Request"
+      },
+      "enableLiveMetricsFilters": true
+    }
+  }
+}
