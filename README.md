@@ -1,7 +1,15 @@
 # FunctionStartupAppInsights
 Using App Insights in Program.cs for .net 6.0 isolated Function App using Function Host V4
 
-Deploying to Azure with the following host.json
+Deploying to Azure with the following `host.json` where the code below is not involved
+
+``` JSON
+    "console": {
+      "isEnabled": true,
+      "DisableColors": true
+    },
+```
+
 
 ``` JSON
 {
