@@ -27,4 +27,10 @@ Using App Insights in Program.cs for .net 6.0 isolated Function App using Functi
 ```
 ---
 
-It is possible to use the `Console.WriteLine` method for writing out to the Kudu C:\home\LogFiles\Application\Function
+It is possible to use the `Console.WriteLine` method for writing out to the Kudu `C:\home\LogFiles\Application\Functions\Host` directory
+
+An Example of what is logged out from this startup:
+
+``` csharp
+
+```
