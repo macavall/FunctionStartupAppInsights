@@ -38,8 +38,6 @@ internal class Program
                 throw new Exception();
             }
 
-            using()
-
             Console.WriteLine("RUNNING host.Run()!");
             host.Run();
         }
@@ -59,4 +57,17 @@ internal class Program
             Console.WriteLine(ex.StackTrace + "CONSOLE");
         }
     }
+
+    private void OnShutdown()
+    {
+        Console.WriteLine("SHUTTING DOWN!!!");
+
+        TelemetryClient client = new TelemetryClient();
+        client.Flush();
+
+        // Allow time for flushing:
+        System.Threading.Thread.Sleep(5000);
+        Console.WriteLine("SHUTTING COMPLETE!!!");
+    }
+
 }
