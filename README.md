@@ -4,14 +4,6 @@ Using App Insights in Program.cs for .net 6.0 isolated Function App using Functi
 Deploying to Azure with the following `host.json` where the code below is not involved
 
 ``` JSON
-    "console": {
-      "isEnabled": true,
-      "DisableColors": true
-    },
-```
-
-
-``` JSON
 {
   "version": "2.0",
   "tracing": {
