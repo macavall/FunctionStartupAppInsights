@@ -11,11 +11,21 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        //private TelemetryClient telemetryClient;
 
         try
         {
-             var host = new HostBuilder()
+            var config = new TelemetryConfiguration()
+            {
+                ConnectionString = Environment.GetEnvironmentVariable("APPLICATIONINSIGHTS_CONNECTION_STRING")
+            };
+
+            var telemetryClient = new TelemetryClient(config);
+
+            telemetryClient.TrackTrace("STARTING FUNCTION APP!");
+
+            Console.WriteLine("STARTING FUNCTION APP Console!");
+
+            var host = new HostBuilder()
             .ConfigureFunctionsWorkerDefaults()
             .ConfigureServices(services => {
                 services.AddApplicationInsightsTelemetryWorkerService();
@@ -41,9 +51,8 @@ internal class Program
 
             telemetryClient.TrackTrace("FAILED5689");
 
-            Console.WriteLine(ex.Message);
+            Console.WriteLine(ex.Message + "Console");
             Console.WriteLine(ex.StackTrace);
         }
-
     }
 }
