@@ -106,3 +106,6 @@ internal class Program
 
 }
 ```
+
+In the Kudu Functions App Logs shows the following:
+
