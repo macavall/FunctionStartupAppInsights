@@ -25,10 +25,6 @@ Deploying to Azure with the following `host.json` where the code below is not in
       "Worker": "Trace",
       "Microsoft.ApplicationInsights": "Trace"
     },
-    //"console": {
-    //  "isEnabled": true,
-    //  "DisableColors": true
-    //},
     "applicationInsights": {
       "samplingSettings": {
         "isEnabled": true,
