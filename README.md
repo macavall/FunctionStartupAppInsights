@@ -4,9 +4,6 @@ Using App Insights in Program.cs for .net 6.0 isolated Function App using Functi
 ``` JSON
 {
   "version": "2.0",
-  "tracing": {
-    "consoleLevel": "verbose"
-  },
   "logging": {
     "fileLoggingMode": "always",
     "logLevel": {
@@ -14,6 +11,10 @@ Using App Insights in Program.cs for .net 6.0 isolated Function App using Functi
       "Microsoft": "Trace",
       "Worker": "Trace",
       "Microsoft.ApplicationInsights": "Trace"
+    },
+    "console": {
+      "isEnabled": true,
+      "DisableColors": true
     },
     "applicationInsights": {
       "samplingSettings": {
