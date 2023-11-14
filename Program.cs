@@ -23,7 +23,7 @@ internal class Program
 
             telemetryClient.TrackTrace("STARTING FUNCTION APP!");
 
-            Console.WriteLine("STARTING FUNCTION APP Console!");
+            Console.WriteLine("STARTING FUNCTION APP CONSOLE!");
 
             var host = new HostBuilder()
             .ConfigureFunctionsWorkerDefaults()
@@ -38,6 +38,9 @@ internal class Program
                 throw new Exception();
             }
 
+            using()
+
+            Console.WriteLine("RUNNING host.Run()!");
             host.Run();
         }
         catch (Exception ex)
@@ -49,10 +52,11 @@ internal class Program
 
             var telemetryClient = new TelemetryClient(config);
 
-            telemetryClient.TrackTrace("FAILED5689");
+            telemetryClient.TrackTrace("EXCEPTION FOUND!!!");
 
-            Console.WriteLine(ex.Message + "Console");
-            Console.WriteLine(ex.StackTrace);
+            Console.WriteLine("EXCEPTION FOUND!!! CONSOLE");
+            Console.WriteLine(ex.Message + "CONSOLE");
+            Console.WriteLine(ex.StackTrace + "CONSOLE");
         }
     }
 }
