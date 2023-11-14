@@ -114,5 +114,6 @@ In the Kudu Functions App Logs shows the following:
 
 Application Insights will show the following details:
 
-![image](https://github.com/macavall/FunctionStartupAppInsights/assets/43223084/f0bdccdb-391d-4e2f-bca6-59620d760669)
+![image](https://github.com/macavall/FunctionStartupAppInsights/assets/43223084/ae103db7-424c-4579-a9b4-e662503af3bc)
+
 
