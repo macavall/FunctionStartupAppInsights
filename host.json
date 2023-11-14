@@ -11,10 +11,6 @@
       "Worker": "Trace",
       "Microsoft.ApplicationInsights": "Trace"
     },
-    "console": {
-      "isEnabled": true,
-      "DisableColors": true
-    },
     "applicationInsights": {
       "samplingSettings": {
         "isEnabled": true,
