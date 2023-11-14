@@ -110,3 +110,4 @@ internal class Program
 
 In the Kudu Functions App Logs shows the following:
 
+![image](https://github.com/macavall/FunctionStartupAppInsights/assets/43223084/355ee217-57db-44e8-9d05-0eeb034f7955)
