@@ -6,6 +6,7 @@ using System;
 using Microsoft.Extensions.Logging.ApplicationInsights;
 using Microsoft.ApplicationInsights.Extensibility;
 using Microsoft.ApplicationInsights;
+using System.Diagnostics;
 
 internal class Program
 {
@@ -21,6 +22,11 @@ internal class Program
 
             var telemetryClient = new TelemetryClient(config);
 
+            Process proc = Process.GetCurrentProcess();
+
+            Console.WriteLine("Memoryproc: " +  proc.PrivateMemorySize64);
+
+            telemetryClient.TrackTrace("STARTING FUNCTION APP!");
             telemetryClient.TrackTrace("STARTING FUNCTION APP!");
 
             Console.WriteLine("STARTING FUNCTION APP CONSOLE!");
